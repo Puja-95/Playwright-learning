@@ -17,9 +17,9 @@ class LoginPage {
     this.submitButton = "'Confirm & Continue'";
   }
 
-  async navigate() {
-    await this.page.goto('https://dt-admin-dev.ldsvcplatform.com/en/login');
-  }
+  // async navigate() {
+  //   await this.page.goto('https://dt-admin-dev.ldsvcplatform.com/en/login');
+  // }
 
   async login(email: string, password: string) {
     await this.page.click(this.countrySelection);
