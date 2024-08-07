@@ -12,7 +12,9 @@ test('User can log in', async ({ page }) => {
 
 
 test('user dashboard screen', async({page})=>{
-
  const dashboard=new DashboardPage(page);
+ await navigate(page, 'https://dt-admin-dev.ldsvcplatform.com/en/login');
+ await dashboard.dashboard();
+ expect (await dashboard.verifyPageTitle()).toBe("'Rates dashboard'");
 
 });
